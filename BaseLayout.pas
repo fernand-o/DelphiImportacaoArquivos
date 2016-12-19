@@ -17,13 +17,10 @@ type
   end;
 
   TPosicao = class(TCustomAttribute)
-  private
-    FInicio: Integer;
-    FTamanho: Integer;
   public
+    Inicio: Integer;
+    Tamanho: Integer;
     constructor Create(Inicio, Tamanho: Integer);
-    property Inicio: Integer read FInicio;
-    property Tamanho: Integer read FTamanho;
   end;
 
   TTipoValor = (tvString, tvCurrency, tvInteger);
@@ -49,8 +46,8 @@ end;
 
 constructor TPosicao.Create(Inicio, Tamanho: Integer);
 begin
-  FInicio := Inicio;
-  FTamanho := Tamanho;
+  Self.Inicio := Inicio;
+  Self.Tamanho := Tamanho;
 end;
 
 { TLayoutBase }
